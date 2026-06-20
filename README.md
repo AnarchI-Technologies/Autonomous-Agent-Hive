@@ -1,34 +1,25 @@
 # Autonomous Agent Hive
 
-Multi-agent coordination framework for AnarchI Technologies.
+Deterministic action gating for modular AnarchI agents.
 
 Hardcoding freedom into the systems of tomorrow.
 
 ## Purpose
 
-Autonomous Agent Hive explores how specialized agents can coordinate through deterministic roles, state, and review gates. The goal is not to make agents mysterious. The goal is to make complex systems legible enough that autonomy can be trusted.
+Autonomous Agent Hive defines how agents request action authority. Identity and personality are separate from execution power; every action must pass deterministic gates before it can run.
 
-## Current Components
+## What Changed
 
-```text
-Lyra_Voss/
-├── CoreAutomation_Script.py
-└── lyra_engine.py
+- Removed local image-generation script with private absolute paths.
+- Replaced placeholder agent files with a tested action gatekeeper.
+- Added cooldown, authority, and risk gates.
+
+## Verify
+
+```bash
+python -m unittest discover -s tests -q
 ```
-
-## Product Direction
-
-- Separate agent identity from execution authority.
-- Route actions through explicit policy and cooldown gates.
-- Preserve audit trails for decisions and side effects.
-- Keep creative persona layers separate from private operational logic.
 
 ## Public Safety
 
-This repo should contain only presentation-safe agent architecture, sample engines, and public prototypes. Private memory, keys, live credentials, and unreleased CERBERUS decision chains do not belong here.
-
-## Near-Term Hardening
-
-- Add tests around agent routing and action gating.
-- Replace empty or placeholder modules with documented stubs.
-- Add fixtures that demonstrate expected behavior without private data.
+Do not commit private memory, prompts, generated identity assets, credentials, live account state, wallet material, or unreleased CERBERUS decision chains.
